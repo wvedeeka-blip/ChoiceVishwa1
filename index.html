@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/src/ServicesPage.css" />
   </head>
   <body>
+    <div class="brand-intro" id="brand-intro" aria-hidden="true"></div>
     <nav class="site-nav" id="page-top" aria-label="Main navigation">
       <div class="nav-inner">
         <a class="brand" href="/" aria-label="ChoiceVishwa">
@@ -29,8 +30,8 @@
             <a aria-current="page" class="nav-link active" href="#services">Services</a>
             <a class="nav-link" href="#">CAP-Info</a>
             <a class="nav-link" href="#">College Predictor</a>
-            <a class="nav-link login-link" href="https://www.choicevishwa.com/login">Login</a>
-            <a class="nav-link signup-link" href="https://www.choicevishwa.com/signup">Sign Up</a>
+            <a class="nav-link login-link" href="#" data-inert-link>Login</a>
+            <a class="nav-link signup-link" href="#" data-inert-link>Sign Up</a>
           </div>
         </div>
       </div>
@@ -65,7 +66,18 @@
             <h2 id="picker-title">Which counselling path are you on?</h2>
             <p class="section-description">Choose a service to see the steps and support that apply to you.</p>
           </div>
-          <span class="picker-count"><i class="bi bi-grid-3x3-gap" aria-hidden="true"></i> 5 pathways</span>
+          <span class="picker-count"><i class="bi bi-grid-3x3-gap" aria-hidden="true"></i> 8 pathways</span>
+        </div>
+        <div class="service-search">
+          <label class="visually-hidden" for="service-search-input">Search counselling services</label>
+          <input
+            class="service-search-input"
+            id="service-search-input"
+            type="search"
+            placeholder="Search services"
+            autocomplete="off"
+          />
+          <p class="service-search-empty" id="service-search-empty" role="status" hidden>No counselling services match your search.</p>
         </div>
         <div class="service-options" id="service-options" role="group" aria-label="Choose a counselling service"></div>
       </section>
@@ -80,7 +92,7 @@
             </div>
             <p class="section-description" id="service-description">Get one-to-one support for the Maharashtra CAP process, from checking eligibility to completing your admission.</p>
           </div>
-          <a class="outline-button" id="counsellor-link" href="mailto:support@choicevishwa.com?subject=Counselling%20support%20-%20MHT-CET%20Counselling">
+          <a class="outline-button" id="counsellor-link" href="#" data-inert-link>
             Talk to a counsellor <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
           </a>
         </div>
@@ -112,51 +124,37 @@
       <section class="support-plans-section" id="support-plans" aria-labelledby="support-plans-title">
         <div class="support-plans-heading">
           <div>
-            <p class="section-eyebrow">MHT-CET counselling support</p>
+            <p class="section-eyebrow" id="support-plans-label">MHT-CET counselling support</p>
             <h2 id="support-plans-title">Choose the support that fits your next step</h2>
             <p class="section-description">Start with a personalized college list or get guidance through the full admission journey.</p>
           </div>
-          <span class="support-plans-note"><i class="bi bi-shield-check" aria-hidden="true"></i> Personal guidance, no guesswork</span>
+          <div class="support-plans-actions">
+            <span class="support-plans-note"><i class="bi bi-shield-check" aria-hidden="true"></i> Personal guidance, no guesswork</span>
+            <button class="compare-plans-button" id="compare-plans-button" type="button" hidden>Compare Plans</button>
+          </div>
         </div>
-        <div class="support-plan-grid">
-          <article class="support-plan">
-            <div class="support-plan-heading">
-              <p class="plan-category">OPTION FORM ONLY</p>
-              <h3>Unlock Your Personalized College List</h3>
-              <p>Perfect for students who need a high-accuracy, personalized option form list reviewed by experts.</p>
-            </div>
-            <div class="support-plan-price"><span class="old-price">₹1,999</span><strong>₹999</strong><span class="discount-badge">50% OFF</span></div>
-            <ul class="support-plan-features">
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>One 1:1 Session with Experts</li>
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Upto 3 branches and 5 locations</li>
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Category-wise cutoff analysis</li>
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Expert reviewed list</li>
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Detailed and easy-to-understand list</li>
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Clear indicators for colleges</li>
-            </ul>
-            <a class="support-plan-button" href="https://www.choicevishwa.com/signup">Unlock My College List <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-          </article>
-          <article class="support-plan featured">
-            <span class="plan-badge">Most Students Choose This</span>
-            <div class="support-plan-heading">
-              <p class="plan-category">END-TO-END GUIDANCE</p>
-              <h3>Get Full Admission Guidance</h3>
-              <p>Comprehensive expert-led guidance for students and parents who want to secure the absolute best college seat.</p>
-            </div>
-            <div class="support-plan-price"><span class="old-price">₹3,999</span><strong>₹1,999</strong><span class="discount-badge">50% OFF</span></div>
-            <ul class="support-plan-features">
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Everything in College List plan</li>
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>1-1 interaction</li>
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Counselling session with parents</li>
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Custom strategy and advice</li>
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Freeze and betterment guidance</li>
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Ongoing support</li>
-              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i>Special college analysis</li>
-            </ul>
-            <a class="support-plan-button primary" href="https://www.choicevishwa.com/signup">Get Full Guidance <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-          </article>
-        </div>
+        <div class="support-plan-grid"></div>
       </section>
+
+      <div class="modal fade" id="plan-comparison-modal" tabindex="-1" aria-labelledby="plan-comparison-title" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="plan-comparison-title">Compare Plans</h2>
+              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close comparison"></button>
+            </div>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table comparison-table">
+                  <caption class="visually-hidden">Plan features included for the selected counselling service</caption>
+                  <thead></thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section class="final-cta" aria-labelledby="final-cta-title">
         <div class="cta-mark"><i class="bi bi-chat-heart" aria-hidden="true"></i></div>
@@ -174,11 +172,11 @@
         <h2>Stay Connected with ChoiceVishwa</h2>
         <p class="footer-follow">Follow us on:</p>
         <div class="footer-social" aria-label="ChoiceVishwa social media">
-          <a href="https://www.instagram.com/choicevishwa?igsh=YXR1bnh0cWQ5NjFx" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://youtube.com/@choicevishwa?si=kONMvvx-go2dNXhi" target="_blank" rel="noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=61573742745229" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" data-inert-link aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" data-inert-link aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" data-inert-link aria-label="Facebook"><i class="bi bi-facebook"></i></a>
         </div>
-        <p class="footer-email-line"><i class="bi bi-envelope-fill" aria-hidden="true"></i> Email: <a href="mailto:support@choicevishwa.com">support@choicevishwa.com</a></p>
+        <p class="footer-email-line"><i class="bi bi-envelope-fill" aria-hidden="true"></i> Email: <a href="#" data-inert-link>support@choicevishwa.com</a></p>
         <p class="footer-tagline">- Your Admission, Our Expertise!</p>
         <p class="footer-copyright">© 2026 ChoiceVishwa. All rights reserved.</p>
         <nav class="footer-links" aria-label="Footer links">
@@ -191,6 +189,7 @@
       <button aria-label="Scroll to top" class="scroll-to-top" type="button"><i class="bi bi-arrow-up" aria-hidden="true"></i></button>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script type="module" src="/src/script.js"></script>
   </body>
 </html>
